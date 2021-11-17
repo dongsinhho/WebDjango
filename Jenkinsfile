@@ -11,7 +11,7 @@
 
             stage('Test') {
                 steps {
-                    sh 'python WebDjango/manage.py test'
+                    sh 'python manage.py test'
                 }
             }
 
