@@ -7,14 +7,13 @@ pipeline {
                   }
             }
             stage('Build') {
-                  agent {
-                        docker {
-                            image 'python:3.9' 
-                        }
-                  }
                   steps {
-                        sh "pip install -r requirements.txt"
-                        sh "echo Ho Ngoc Dong Sinh"
+                        sh "echo Build Ho Ngoc Dong Sinh"
+                  }
+            }
+            stage('Test') {
+                  steps {
+                        sh "echo Test Ho Ngoc Dong Sinh"
                   }
             }
       }
